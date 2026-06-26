@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: gregor
-  version: 0.0.2
+  version: "0.1.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/gregor-${{ version }}.tar.gz
-  sha256: 5b4f16dcb9e67c6dfd734910c834289283a93f58ac920b3c2c6d3f4876ccc309
+  sha256: e061b9449b3bbca430b5ed1ddb41f2cec966961f75ddc7d1e2aef61658a42c99
 
 build:
   number: 0
@@ -47,7 +47,7 @@ tests:
         - "*"
       pip_check: true
   - script:
-     - gregor --help
+      - gregor --help
 
 about:
   summary: A library for spatial aggregation and disaggregation
